@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi Galería con CSS</title>
+  <style>
+    /* Estilo general */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      display: flex;
+    }
+
+    /* Menú lateral */
+    .menu {
+      background-color:#d62828;
+      padding: 15px;
+      width: 200px;
+      min-height: 100vh;
+    }
+
+    .menu h2 {
+      color: black;
+      text-align: center;
+    }
+
+    .menu a {
+      display: block;
+      color:black;
+      text-decoration: none;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #6d3011;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #00a3dd;
+      color: black;
+    }
+
+    /* Contenido principal */
+    .contenido {
+      flex: 1;
+      padding: 20px;
+      background-color: #00a3dd;
+    }
+
+    /* Galería */
+    .galeria {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .galeria img {
+      width: 200px;
+      border: 4px solid #6c5ce7;
+      border-radius: 8px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1);
+      border-color: #00cec9;
+    }
+
+    /* Video embebido */
+    .video-embed {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .video-embed iframe {
+      border: 4px solid #4a90e2;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú lateral -->
+  <aside class="menu">
+    <h2>Menú de Ejemplos</h2>
+    <a href="#inicio">Inicio</a>
+    <a href="#ejemplo1">Ejemplo 1</a>
+    <a href="#ejemplo2">Ejemplo 2</a>
+    <a href="#ejemplo3">Ejemplo 3</a>
+    <a href="#galeria">Galería</a>
+    <a href="#video">Video</a>
+  </aside>
+
+  <!-- Contenido -->
+  <main class="contenido">
+
+    <!-- Sección de inicio -->
+    <section id="inicio">
+      <h1>Bienvenido a mi Página Principal</h1>
+      <p>Esta galería muestra imágenes con efectos de CSS y enlaces a ejemplos realizados en clase.</p>
+    </section>
+
+    <!-- Ejemplo 1 -->
+    <section id="ejemplo1">
+      <h2>Ejemplo 1</h2>
+      <p>Este es el contenido del primer ejemplo realizado en clase.</p>
+    </section>
+
+    <!-- Ejemplo 2 -->
+    <section id="ejemplo2">
+      <h2>Ejemplo 2</h2>
+      <p>Este es el contenido del segundo ejemplo realizado en clase.</p>
+    </section>
+
+    <!-- Ejemplo 3 -->
+    <section id="ejemplo3">
+      <h2>Ejemplo 3</h2>
+      <p>Este es el contenido del tercer ejemplo realizado en clase.</p>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria">
+      <h2>Galería de Imágenes</h2>
+      <div class="galeria">
+        <img src="https://drive.google.com/thumbnail?id=1Vw1MsQkMhVLnfeFgknI--te3Af4VQi8O"alt="Imagen 1">
+        <img src="https://drive.google.com/thumbnail?id=1QAgulE7d0ZdQ2O1XidKrDAqgx4owfzrT"alt=2Imagen 2">
+        <img src="https://drive.google.com/thumbnail?id=1vFBnSCMiIDz0m2VDZ8YSNEnWLnsX4b19"alt="Imagen 3">
+      </div>
+    </section>
+
+    <!-- Video embebido -->
+    <section id="video">
+      <div class="video-embed">
+        <h2>Video Embebido</h2>
+        <iframe src="https://drive.google.com/file/d/1ZF5T6HafZGplPemjUaHRsFMgiuRQzqsg/preview" width="640" height="480" allow="autoplay"></iframe>
+    </section>
+
+  </main>
+</body>
+</html>
